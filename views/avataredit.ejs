@@ -1,0 +1,15 @@
+<% include partials/header%>
+    <div id="new">
+      <p class="textcenter"><%= currentUser.username%></p>
+      <h1 class="textcenter">Edit Avatar</h1>
+      <div id="updatecont" >
+          <form action="/avataredit?_method=PUT" method="POST" enctype="multipart/form-data">
+            <label for="imageinput"><img id="avatarupdatelbl" src="<%= currentUser.avatar%>"></label>
+            <input type="file"       name="image"               class="form-itm" accept="image/*" id="imageinput"></input>
+            <img id="imagepreview" src="" alt="">
+            <input    class="form-itm submit"           type="submit" id="submit" value="Upload">
+          </form>
+          <a href="/logout">Logout</a>
+      </div>
+    </div>
+<% include partials/footer%>

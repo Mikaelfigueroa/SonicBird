@@ -1,0 +1,40 @@
+<% include partials/header%>
+
+    <div id="blogindex"class="contained">
+        <p id="indexheader">Featured Blogpost</p>
+        <div id="blogpostcont">
+            <div id="blogcont1">
+
+
+
+              <% for(var i = 0; i < blog.length; i++){ %>
+                <a class="blogcont" href="/blogs/<%= blog[i].id %>">
+                  <img class="blogimg" src="<%= blog[i].image %>">
+                  <span class="blogtextcont">
+                    <p class="blogtittle"><%= blog[i].tittle %></p>
+                    <p class="blogdate"><%= blog[i].date %></p>
+                    <p class="blogdescr"><%= blog[i].body.substring(3,180) + "..."%></p>
+                  </span>
+                </a>
+
+
+
+              <% } %>
+            </div>
+              <div id="blogcont2">
+                <img class="sideaddimage" src="https://res.cloudinary.com/dbjw5nvs2/image/upload/v1587950148/add1_vvydwe.png" alt="">
+                <% for(var i = 0; i < sideblogs.length; i++){ %>
+                      <a class="sidearticlecont" href="/blogs/<%= sideblogs[i].id %>">
+                        <img class="sideartimg" src="<%= sideblogs[i].image %>">
+                        <p class="sidearttittle"><%= sideblogs[i].tittle %></p>
+                      </a>
+
+
+                <% } %>
+                <img class="sideaddimage" src="https://res.cloudinary.com/dbjw5nvs2/image/upload/v1587950145/add2_jwn44i.png" alt="">
+              </div>
+
+
+        </div>
+    </div>
+<% include partials/footer%>

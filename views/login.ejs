@@ -1,0 +1,17 @@
+<% include partials/header%>
+    <div id="form">
+        <h1 class="textcenter">login</h1>
+        <form method="POST" action="/login">
+            <label for="username">Username</label>
+            <input class="form-itm required" name="username" type="string" placeholder="Username">
+
+            <label for="password">Password</label>
+            <input class="required form-itm" name="password" type="password"   placeholder="Password" class="required">
+
+            <input class="form-itm submit"                   type="submit"    id="submit" value="Login">
+            <a id="registerbtn" class="form-itm textcenter" href="/register">Create account</a>
+        </form>
+        <p></p>
+    </div>
+
+<% include partials/footer%>

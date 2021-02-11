@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans|Righteous&display=swap|Playfair+Display&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9da1e070df.js"></script>
+    <title>SonicBird</title>
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">-->
+  </head>
+  <body>
+    <div id="container">
+      <div id="navbar">
+            <div id="nav1">
+              <div class="hidden" id="mobilesearch">
+                  <form id="mobilesearchform" action="/blogs" method="get">
+                    <input type="text" name="search"  id="mobilesearchinput" placeholder="Search..." autofocus>
+                  </form>
+                  <i id="mobilesearchclose" class="fas fa-times-circle"></i>
+
+
+              </div>
+              <div class="contained">
+
+
+
+
+                <div id="logocont">
+
+
+
+                  <a href="/blogs" id="logotext">SonicBird</a>
+
+                </div>
+
+
+
+
+
+
+                <div id="nav1side">
+
+
+
+
+                  <span id="searchiconmobilecont" class="fa-stack">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-search fa-stack-1x fa-inverse" id="searchiconmobile"></i>
+                  </span>
+
+                  <div class="searchwrapper">
+
+                      <i class="fas fa-search" id="searchicon"></i>
+
+                    <form class="" action="/blogs" method="get">
+                      <input type="text" name="search"  id="searchinput" placeholder="search...">
+                    </form>
+                  </div>
+
+
+                    <% if(!currentUser){ %>
+                      <a href="/login" id="loginbtn">Login</a>
+                      <a href="/login">
+
+                      <span id="searchiconmobilecont" class="fa-stack">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                          <i id="avatarmobile" class="fas fa-user fa-stack-1x fa-inverse"></i>
+
+                      </span>
+                      </a>
+                    <% } %>
+
+                    <% if(currentUser){ %>
+                      <a id="profilepiccont" href="/avataredit"><img id="profilepic" src="<%= currentUser.avatar %>" alt=""></a>
+
+                    <% } %>
+                </div>
+
+
+
+
+
+              </div>
+            </div>
+
+
+
+      </div>
+      <% if(error && error.length > 0) { %>
+        <div id="flash" class="container error">
+          <div class="alert alert-danger"><p><%=error %></p></div>
+        </div>
+      <% } %>
+      <% if(success && success.length > 0) { %>
+        <div id="flash" class="container success">
+          <div class="alert alert-success"><p><%= success %></p></div>
+        </div>
+      <% } %>
+      <div id="content">

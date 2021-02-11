@@ -1,0 +1,148 @@
+<% include partials/header%>
+
+  <div id="blogshow" class="contained">
+    <div id="blogshowwrapper">
+
+
+      <div id="blogshowcont">
+        <p id="showheader">
+          <%=blogs.tittle%>
+        </p>
+        <img id="showimg" src="<%= blogs.image%>">
+        <i>
+          <p class="blogdate">
+            <%= blogs.date%>
+          </p>
+        </i>
+        <div class="blogshowwrapper1">
+          <%-blogs.body%>
+        </div>
+        <br>
+
+
+
+
+
+
+
+
+        <div class="commentsection">
+          <div class="commentwrapper">
+            <% if(currentUser){ %>
+              <div class="owncomment">
+                <div class="commentavatar">
+                  <img class="commentavatar" src="<%= currentUser.avatar %>" alt="">
+                </div>
+                <form class="newcommentform" action="/blogs/<%= blogs._id%>/comments" method="POST">
+                  <input class="owncommentinput" type="text" name="text" placeholder="Write a comment">
+                </form>
+              </div>
+              <% } %>
+
+                <% if(!currentUser){ %>
+                  <p class="textcenter">Login to leave a comment</p>
+                  <% } %>
+
+
+
+
+
+
+
+
+
+
+                    <% blogs.comments.forEach(function(arr){ %>
+                      <div class="comment">
+                        <div class="commentavatar">
+                          <img class="commentavatar" src="<%= arr.user.avatar %>" alt="">
+                        </div>
+
+
+                        <div class="commencont">
+
+                          <div>
+                            <p class="username">
+                              <%= arr.user.username %>
+                            </p>
+                            <p class="comment-text">
+                              <%= arr.text %>
+                            </p>
+                          </div>
+
+                          <p class="replytoggle">Reply</p>
+                          <div class="replywrapper">
+
+                            <div class=" reply-hidden">
+                              <i class="fas fa-times replycancel"></i>
+                            </div>
+                            <form class="replycommentinput reply-hidden" action="/blogs/<%= blogs._id%>/<%= arr._id%>"
+                              method="POST">
+                              <input class="commentinput" type="text" name="reply" placeholder="Write a reply...">
+                            </form>
+                          </div>
+
+
+
+
+
+
+                          <div class="repplies">
+                            <% arr.replies.forEach(function(inarr){ %>
+                              <div class="commentcont repliescont">
+
+                                <div class="commentavatar">
+                                  <img class="commentavatar" src="<%= inarr.user.avatar%>" alt="">
+                                </div>
+                                <div>
+                                  <p class="username">
+                                    <%= inarr.user.username%>
+                                  </p>
+                                  <p class="comment-text">
+                                    <%= inarr.text%>
+                                  </p>
+                                </div>
+                              </div>
+                              <% }) %>
+
+                          </div>
+
+                        </div>
+
+
+
+                      </div>
+
+                      <% }) %>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="blogcont2">
+        <img class="sideaddimage" src="https://res.cloudinary.com/dbjw5nvs2/image/upload/v1588026235/add3_y2cwnl.png"
+          alt="">
+        <% for(var i=0; i < sideblogs.length; i++){ %>
+          <a class="sidearticlecont" href="/blogs/<%= sideblogs[i].id %>">
+            <img class="sideartimg" src="<%= sideblogs[i].image %>">
+            <p class="sidearttittle">
+              <%= sideblogs[i].tittle %>
+            </p>
+          </a>
+          <% } %>
+            <img class="sideaddimage"
+              src="https://res.cloudinary.com/dbjw5nvs2/image/upload/v1589074257/add4_wr6qqb.png" alt="">
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+  <% include partials/footer%>

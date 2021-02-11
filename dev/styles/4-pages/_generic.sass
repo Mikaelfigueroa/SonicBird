@@ -1,0 +1,434 @@
+input:focus,
+select:focus,
+textarea:focus,
+button:focus
+    outline: none
+
+#logotext
+  font-family: 'Righteous', cursive
+  font-size: 45px
+  font-weight: 600
+  line-height: 1.1
+  color: black
+  &:active
+    color: black
+
+#container
+ width: 100%
+ display: flex
+ align-items: center
+ flex-direction: column
+
+#logocont
+  display: flex
+  position: relative
+  flex-direction: row
+  align-items: center
+
+
+
+#Capa_1
+  height: 40px
+  width: 40px
+  fill: $secondary
+  margin-right: 4px
+  margin-left: 4px
+  display: none
+
+.searchwrapper
+  display: flex
+  flex-direction: row
+  align-items: center
+  border: 1px solid #c3c4c9
+  height: 34px
+
+#searchinput
+  box-sizing: border-box
+  width: 100%
+  border: 0px
+
+#searchicon
+  padding: 0px 6px
+  color: #939496
+
+.testcolor
+  color: red
+  fill: orange
+
+
+.sideaddimage
+  width: 100%
+  height: auto
+  margin-bottom: 20px
+
+#blogcont2
+    width: 300px
+    margin-right: 10px
+    display: flex
+    flex-direction: column
+    align-self: flex-end
+
+#blogcont2 *
+  order: 1
+
+#blogcont2 img + a
+  order: -1
+
+input[type=file]
+  display: none
+
+#imagepreview
+  width: 100%
+  height: auto
+
+#navbar
+ width: 100%
+ display: flex
+ flex-direction: column
+ position: fixed
+ align-items: center
+ flex-wrap: wrap
+ transition: height 0.2s ease
+ box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2)
+
+#profilepic
+  width: 30px
+  height: 30px
+  border: 2px solid $secondary
+
+
+#profilepiccont
+  line-height: 0 !important
+  background-color: $primary
+  border-radius: 4px
+  margin-left: 5px
+
+
+#searchnavinput
+  padding: 0px !important
+  background-color: transparent
+  &:hover
+      border: 1px solid transparent
+
+#searchiconmobilecont
+  margin-right: 5px
+
+
+
+#navsearch
+  display: flex
+  flex-direction: row
+
+#socialleft i
+  color: $secondary
+
+#nav1
+  background-color: white
+  align-items: flex-end
+  width: 100vw
+  flex-direction: column
+
+
+#nav1 .contained, #nav2 .contained
+  display: flex
+  flex-direction: row
+
+#nav1, .contained
+  justify-content: space-between
+  align-items: center
+
+#instlogo
+  width: 22px
+  height: 22px
+  margin: 0px 0px 10px 5px
+
+#loginbtn
+  margin-left: 5px
+  transition: 0.2s
+  background-color: rgb(60, 60, 60)
+  align-self: center
+  color: white
+  font-weight: 500
+  line-height: 1
+  padding: 10px 20px 10px 20px
+  background-color: $secondary
+  box-sizing: border-box
+  height: 36px
+  border: 1px solid $secondary
+  text-align: center
+  &:hover
+    color: $secondary
+    background-color: white
+    border: 1px solid $secondary
+    text-decoration: none
+
+p
+  word-break: break-word
+
+#nav1, #nav2
+  width: 100%
+  display: flex
+  justify-content: center
+
+
+
+#nav1side
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-end
+  margin-right: 10px
+  width: 300px
+  height: 40px
+  overflow: hidden
+  text-overflow: clip
+
+#mobilesearch
+  position: fixed
+  width: 100%
+  background-color: #fff0f0
+  z-index: 10
+  height: 49px
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+#searchiconmobile
+  margin-right: 10px
+
+#new
+  background-color: white
+
+#mobilesearchinput
+  font-size: 45px
+  height: 49px
+  border: 0px
+  padding: 0px
+  width: 100%
+  background-color: #fff0f0
+
+
+#mobilesearchform
+  width: 100%
+
+#mobilesearchclose
+  font-size: 35px
+  margin-right: 5px
+
+.show
+  display: flex
+
+.hide
+  display: none
+
+
+#content
+  padding-top: 50px
+  width: 100%
+  display: flex
+  align-items:  center
+  flex-direction: column
+  min-height: 100vh
+  background-color: #f7f8ff
+
+#logo
+  width: 193.4
+  height: 62.8px
+
+#socialleft
+  position: fixed
+  bottom: calc(50vh - 31px)
+  right: 0px
+  display: flex
+  flex-direction: column
+
+#footer
+  display: flex
+  flex-direction: row
+  justify-content: center
+  background-color: $secondary
+  color: white
+  width: 100%
+  font-size: 18px
+  padding: 14px 0px
+  font-family: 'Open Sans', sans-serif !important
+
+#Layer_1
+  width: 12px
+  height: 12px
+
+#portreftag
+  color: #38de01
+  transition: .3s
+  &:hover
+    color: #49ff83
+
+#footerlink
+  color: #ff917b !important
+  transition: .3s
+  &:hover
+    color: #ff0e01 !important
+
+
+@keyframes fadeOut
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+
+
+@-moz-keyframes fadeOut
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+
+@-webkit-keyframes fadeOut
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+@-o-keyframes fadeOut
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+@-ms-keyframes fadeOut
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+
+#flash
+  position: fixed
+  z-index: 10
+  width: 80vw
+  top: 50px
+  left: auto
+  right: auto
+  padding: 20px
+  border-radius: 5px
+  visibility: visible
+  animation: fadeOut ease 20s
+  -webkit-animation: fadeOut ease 20s
+  -moz-animation: fadeOut ease 20s
+  -o-animation: fadeOut ease 20s
+  -ms-animation: fadeOut ease 20s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
+.success
+  background-color: #24e03d
+  border: 1px solid 35, 112, 55
+  color: 35, 112, 55
+
+#registerbtn, #loginbtn2
+  background-color: white
+  color: $primary
+
+#updatecont
+  width: 300px
+  display: flex
+  align-items: center
+  width: 100%
+  flex-direction: column
+
+#updatecont #submit
+  width: 300px
+
+.error
+  background-color: #ff9999
+  border: 1px solid #ff5252
+  color: #ff5252
+
+#avatarupdatelbl
+  width: 300px
+  height: 300px
+
+.blogdate
+  color: white
+  align-self: flex-start
+  padding: 6px 10px
+  display: inline-block
+  background-color: $secondary
+  margin: 10px 0px 10px 0px !important
+
+.contained
+  width: 100%
+  max-width: 1100px
+  overflow: hidden
+  background-color: #fcfdff
+
+
+#blogindex, #blogshowwrapper
+  box-shadow: 0 4px 6px 0 hsla( 0, 0%, 0%, 0.2)
+
+#hiddenuser
+  display: none
+
+.expanded
+  height: 92px !important
+  display: flex
+
+#searchiconmobilecont,#avatarmobilecont
+  display: none !important
+
+@media (max-width: 1250px)
+  #socialleft span i
+    display: none !important
+
+
+  #footer
+    flex-direction: column !important
+    align-items: center !important
+
+@media (max-width: 1150px)
+  #searchstack
+    margin-right: 10px
+
+@media (max-width: 576px)
+  #navbar,#navright
+    flex-direction: column
+
+
+
+  #registeruser
+    display: none !important
+
+  #hiddenuser
+    display: inline-block !important
+
+
+  #loginbtn
+    margin-right: 0px
+
+@media (max-width: 600px)
+  #searchstack
+    margin: 0px 5px 0px 0px !important
+
+  .searchwrapper
+    display: none
+
+  #searchiconmobilecont,#avatarmobilecont
+    display: inline-block !important
+
+  #loginbtn
+    display: none
+
+  #nav1side
+    width: 74px
+
+  #profilepic
+    border-radius: 50px
+    height: 32px
+    width: 32px
+    border: 0px
+
+  #profilepiccont
+    margin-right: 0px !important

@@ -1,0 +1,18 @@
+<% include partials/header%>
+    <div id="new">
+        <h1 class="textcenter">New blog post</h1>
+        <div id="newform">
+            <form action="/blogs" method="POST" enctype="multipart/form-data">
+                <input    class="form-itm required newform" type="text"       name="blog[tittle]" placeholder="tittle"></input>
+                <label for="imageinput">select image</label>
+                <input    class="form-itm"                  type="file"       name="image"        placeholder="image" accept="image/*" required  id="imageinput"></input>
+                <input    class="form-itm required newform" type="text"       name="blog[date]"   placeholder="date"></input>
+                <textarea class="form-itm required newform" type="text"       name="blog[body]"   placeholder="blog post here" rows="20"></textarea>
+                <input    class="form-itm submit"           type="submit" id="submit" value="Post">
+            
+        
+            </form>
+            <a href="/">Go Back</a>
+        </div>
+    </div>
+<% include partials/footer%>

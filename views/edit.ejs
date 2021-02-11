@@ -1,0 +1,15 @@
+<% include partials/header%>
+
+    <div id="newform">
+        <form action="/blogs/<%=blog._id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <input    class="form-itm newform" type="text" name="blog[tittle]"      value="<%=blog.tittle%>"></input>
+            <input    class="form-itm newform" type="file" name="image"             accept="image/*"></input>
+            <input    class="form-itm newform" type="radio"name="blog[isfeatured]"  value="true" checked></input>
+            <input    class="form-itm newform" type="radio"name="blog[isfeatured]"  value="false"></input>
+            <textarea class="form-itm newform" type="text" name="blog[body]"><%=blog.body%></textarea>
+            <button>Sumbit</button>
+        </form>
+        <a href="/">Go Back</a>
+    </div>
+
+<% include partials/footer%>

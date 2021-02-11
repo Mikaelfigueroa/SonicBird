@@ -1,0 +1,15 @@
+<% include partials/header%>
+    <div id="form">
+        <h1 class="textcenter">Register</h1>
+        <form method="POST" action="/register" enctype="multipart/form-data">
+            <label for="username">Username</label>
+            <input id="username"    type="text"      name="username" placeholder="Username"  class="required form-itm">
+            <label for="email">Email</label>
+            <input id="email"       type="email"     name="email"    placeholder="Email"     class="required form-itm">
+            <label for="password">Password</label>
+            <input id="password"    type="password"  name="password" placeholder="Password"  class="required form-itm">
+            <input type="submit"    id="submit" value="Sign Up" class="form-itm">
+        </form>
+        <a id="loginbtn2" class="form-itm textcenter" href="/login">Login here</a>
+    </div>
+<% include partials/footer%>
